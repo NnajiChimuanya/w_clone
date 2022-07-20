@@ -7,7 +7,7 @@ import axios from "../../axios";
 
 const Login = () => {
   const handleLoginClick = () => {
-    axios.post("/api/user/register").then((res) => {
+    axios.get("/auth/google").then((res) => {
       console.log(res);
     });
   };
