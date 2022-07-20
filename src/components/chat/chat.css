@@ -1,0 +1,105 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    flex: 0.65;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+   padding: 0px 20px 10px 20px;
+   margin-top: 0px;
+}
+
+.chat-header-info {
+    flex: 1;
+    padding-left: 20px;
+    margin-top: 0px;
+}
+
+.chat-header-info > h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-weight: 500px;
+}
+.chat-header-info > p {
+    margin-top: 0px;
+    font-size: 16px;
+    color: gray;
+}
+
+.chat-body {
+    flex: 1;
+    background: url("https://res.cloudinary.com/practicaldev/image/fetch/s--WAKqnINn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/tw0nawnvo0zpgm5nx4fp.png");
+    background-repeat: repeat;
+    background-position: center;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.chat-body::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-message {
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+#chat-timestamp {
+    margin-left: 10px;
+    font-size: xx-small;
+}
+
+.chat-name {
+    position : absolute;
+    top: -15px;
+    font-weight: 800;
+    font-size: small;
+}
+
+.chat-reciever {
+    margin-left: auto;
+    background-color: #dcf8c6;
+}
+
+
+.chat-footer {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-top: 1px solid lightgray;
+}
+
+.attach-file-icon {
+    transform: rotate(40deg);
+}
+
+.chat-footer > .MuiSvgIcon-root {
+    padding: 10px;
+}
+
+.chat-footer > form {
+    flex: 1;
+    display: flex;
+}
+
+.chat-footer > form > input {
+    flex : 1;
+    border-radius : 30px;
+    padding: 10px;
+    border: none;
+    outline-style: none;
+}
+
+.chat-footer > form > button {
+    display: none;
+    color: gray;
+}
+
