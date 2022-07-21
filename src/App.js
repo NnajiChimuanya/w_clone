@@ -11,9 +11,11 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    axios.get("/api/message/sync").then((response) => {
-      setMessages(response.data);
-    });
+    axios
+      .get("https://wapp-clone-backend.herokuapp.com/api/message/sync")
+      .then((response) => {
+        setMessages(response.data);
+      });
   }, []);
 
   useEffect(() => {
