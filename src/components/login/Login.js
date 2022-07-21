@@ -7,9 +7,11 @@ import axios from "../../axios";
 
 const Login = () => {
   const handleLoginClick = () => {
-    axios.get("/auth/google").then((res) => {
-      console.log(res);
-    });
+    axios
+      .get("https://wapp-clone-backend.herokuapp.com/auth/google/")
+      .then((res) => {
+        console.log(res);
+      });
   };
 
   return (
