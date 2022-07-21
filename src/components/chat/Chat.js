@@ -36,7 +36,7 @@ export default function Chat({ messages }) {
         <Avatar />
 
         <div className="chat-header-info">
-          <h3> Room name</h3>
+          <h3> Room namee</h3>
           <p> Last seen 12:34pm</p>
         </div>
 
