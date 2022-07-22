@@ -1,5 +1,6 @@
 import Sidebar from "./components/sidebar/Sidebar";
 import Chat from "./components/chat/Chat";
+import Main from "./Main";
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import Pusher from "pusher-js";
@@ -8,7 +9,7 @@ import Login from "./components/login/Login";
 
 function App() {
   const [messages, setMessages] = useState([]);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   useEffect(() => {
     axios
@@ -42,10 +43,7 @@ function App() {
         <Login />
       ) : (
         <div className="app">
-          <div className="app-body">
-            <Sidebar />
-            <Chat messages={messages} />
-          </div>
+          <Main messages={messages} />
         </div>
       )}
     </div>
