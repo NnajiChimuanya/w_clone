@@ -9,11 +9,21 @@ import Login from "./components/login/Login";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
-  // const [loggedIn, setLoggedIn] = useState(true);
+  useEffect(() => {
+    const data = axios.get(
+      "https://wapp-clone-backend.herokuapp.com/auth/success",
+      { withCredentials: true }
+    );
+    setUser(data.user);
+  }, []);
+
+  const [user, setUser] = useState();
+
+  console.log(user);
 
   return (
     <Switch>
-      <Route exact path="/" component={Main} />
+      <Route exact path="/" component={user ? Main : Login} />
       <Route path="/login" component={Login} />
     </Switch>
   );
