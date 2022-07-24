@@ -11,8 +11,7 @@ import { Switch, Route } from "react-router-dom";
 function App() {
   useEffect(() => {
     const data = axios.get(
-      "https://wapp-clone-backend.herokuapp.com/auth/success",
-      { withCredentials: true }
+      "https://wapp-clone-backend.herokuapp.com/auth/success"
     );
     setUser(data.user);
   }, []);
