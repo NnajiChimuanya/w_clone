@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const data = axios.get(
       "https://wapp-clone-backend.herokuapp.com/auth/success",
-      { withCredentials: true }
+      { withCredentials: false }
     );
     setUser(data.user);
   }, []);
