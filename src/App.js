@@ -17,7 +17,7 @@ function App() {
     setUser(data.user);
   }, []);
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
 
   console.log(user);
 
