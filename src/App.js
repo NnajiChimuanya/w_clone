@@ -17,14 +17,14 @@ function App() {
     setUser(data.user);
   }, []);
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({ name: "Hello" });
 
   console.log(user);
 
   return (
     <Switch>
       <Route exact path="/" component={user ? Main : Login} />
-      <Route path="/login" component={!user ? Login : Main} />
+      <Route path="/login" component={Login} />
     </Switch>
   );
 }
