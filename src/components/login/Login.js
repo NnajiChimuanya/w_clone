@@ -14,7 +14,7 @@ const Login = () => {
     //   });
 
     window.open(
-      "https://wapp-clone-backend.herokuapp.com/auth/google/",
+      "https://wapp-clone-backend.herokuapp.com/auth/google",
       "_self"
     );
   };

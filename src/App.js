@@ -9,15 +9,19 @@ import Login from "./components/login/Login";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
-  useEffect(() => {
-    const data = axios.get(
+  const fetchData = async () => {
+    const data = await axios.get(
       "https://wapp-clone-backend.herokuapp.com/auth/success",
       { withCredentials: true }
     );
-    setUser(data.user);
+    setUser(data);
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
 
-  const [user, setUser] = useState({ name: "Hello" });
+  const [user, setUser] = useState(null);
 
   console.log(user);
 
