@@ -14,7 +14,7 @@ function App() {
       "https://wapp-clone-backend.herokuapp.com/auth/success",
       { withCredentials: true }
     );
-    setUser(data.user);
+    setUser(data);
   };
 
   useEffect(() => {
