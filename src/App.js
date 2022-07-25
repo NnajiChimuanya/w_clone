@@ -24,7 +24,7 @@ function App() {
   return (
     <Switch>
       <Route exact path="/" component={user ? Main : Login} />
-      <Route path="/login" component={Login} />
+      <Route path="/login" component={!user ? Login : Main} />
     </Switch>
   );
 }
