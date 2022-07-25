@@ -10,11 +10,11 @@ import { Switch, Route } from "react-router-dom";
 
 function App() {
   const fetchData = async () => {
-    const { data } = await axios.get(
+    const data = await axios.get(
       "https://wapp-clone-backend.herokuapp.com/auth/success",
       { withCredentials: true }
     );
-    setUser(data.user.json);
+    setUser(data.user);
   };
 
   useEffect(() => {
