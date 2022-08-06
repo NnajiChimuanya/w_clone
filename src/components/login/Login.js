@@ -1,8 +1,7 @@
 import "./login.css";
 import React from "react";
 import { Button } from "@material-ui/core";
-// import {  MailOutline } from "@mui/icons-material";
-import ArrowForwardIos from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import axios from "../../axios";
 
 const Login = () => {
@@ -50,6 +49,7 @@ const Login = () => {
           <div className="login-button">
             <Button fullWidth onClick={handleLoginClick}>
               Continue with Google
+              <ArrowForwardIos className="arrow-forward" />
             </Button>
           </div>
         </div>
