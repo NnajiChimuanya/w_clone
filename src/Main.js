@@ -34,11 +34,9 @@ const Main = () => {
   console.log(messages);
 
   return (
-    <div className="app">
-      <div className="app-body">
-        <Sidebar />
-        <Chat messages={messages} />
-      </div>
+    <div className="app-body">
+      <Sidebar />
+      <Chat messages={messages} />
     </div>
   );
 };
