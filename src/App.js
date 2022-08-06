@@ -21,7 +21,7 @@ function App() {
     fetchData();
   }, []);
 
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   console.log(user);
 

@@ -41,13 +41,9 @@ export default function Chat({ messages }) {
         </div>
 
         <div className="chat-header-right">
-          <IconButton>
-            <SeearchIcon />
-          </IconButton>
+          <SeearchIcon />
 
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
+          <MoreVertIcon />
         </div>
       </div>
 
@@ -71,9 +67,7 @@ export default function Chat({ messages }) {
       </div>
 
       <div className="chat-footer">
-        <IconButton>
-          <MoodIcon />
-        </IconButton>
+        <MoodIcon />
 
         {/* {chosenEmoji ? (
           <span>You chose: {chosenEmoji.emoji}</span>
@@ -83,9 +77,7 @@ export default function Chat({ messages }) {
 
         <Picker onEmojiClick={onEmojiClick}  pickerStyle={{ width: '100%' }}/> */}
 
-        <IconButton>
-          <AttachFileIcon className="attach-file-icon" />
-        </IconButton>
+        <AttachFileIcon className="attach-file-icon" />
 
         <form>
           <input
@@ -100,9 +92,7 @@ export default function Chat({ messages }) {
           </button>
         </form>
 
-        <IconButton>
-          <MicIcon />
-        </IconButton>
+        <MicIcon />
       </div>
     </div>
   );

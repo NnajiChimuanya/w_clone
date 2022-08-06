@@ -8,7 +8,11 @@
   background-color: #ededed;
   /* margin-top: -50px; */
   height: 100vh;
-  width: 100vw;
+  overflow: scroll;
+}
+
+.app-body::-webkit-scrollbar {
+  display: none;
 }
 
 html {
