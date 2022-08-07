@@ -22,10 +22,12 @@
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   margin-bottom: 2px;
+  font-weight: 600;
 }
 
 .sidebar-chat-info > p {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 0px;
   font-weight: 300;
+  color: rgb(105, 103, 103);
 }

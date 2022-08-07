@@ -1,13 +1,13 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  flex: 0.35;
+  flex: 0.3;
 }
 
 .sidebar-header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 18px;
   border-right: 1px solid lightgray;
   align-items: center;
 }
@@ -22,6 +22,7 @@
 .sidebar-header-right > .MuiSvgIcon-root {
   margin-right: 2vw;
   cursor: pointer;
+  color: rgb(105, 103, 103);
 }
 
 .sidebar-header-right > .MuiSvgIcon-root:hover {
