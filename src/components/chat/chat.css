@@ -1,7 +1,7 @@
 .chat {
   display: flex;
   flex-direction: column;
-  flex: 0.65;
+  flex: 0.7;
   height: 100vh;
 }
 
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgray;
-  padding: 20px;
+  padding: 15px;
   margin-top: 0px;
 }
 
@@ -21,6 +21,8 @@
   flex: 1;
   padding-left: 20px;
   margin-top: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 .chat-header-info > h3 {
@@ -32,6 +34,16 @@
   margin-top: 0px;
   font-size: 16px;
   color: gray;
+}
+
+.chat-header-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-header-right > .MuiSvgIcon-root {
+  color: rgb(105, 103, 103);
+  margin-right: 5px;
 }
 
 .chat-body {
@@ -87,6 +99,7 @@
 
 .chat-footer > .MuiSvgIcon-root {
   padding: 10px;
+  color: rgb(105, 103, 103);
 }
 
 .chat-footer > form {
