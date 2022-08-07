@@ -35,6 +35,12 @@
   background-color: #f6f6f6;
   height: 39px;
   padding: 10px;
+  justify-content: space-between;
+}
+
+.sidebar-search > .MuiSvgIcon-root {
+  color: rgb(105, 103, 103);
+  margin-left: 3px;
 }
 
 .sidebar-search-container {

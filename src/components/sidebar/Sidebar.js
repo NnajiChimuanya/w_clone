@@ -6,6 +6,7 @@ import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 import { IconButton, Avatar } from "@mui/material";
 import SidebarChat from "./SidebarChat";
 import SeearchIcon from "@mui/icons-material/Search";
+import FilterListIcon from "@mui/icons-material/FilterList";
 
 export default function Sidebar() {
   return (
@@ -27,6 +28,7 @@ export default function Sidebar() {
           <SeearchIcon />
           <input placeholder="search or start new chat" type="text"></input>
         </div>
+        <FilterListIcon />
       </div>
 
       <div className="sidebar-chats">
