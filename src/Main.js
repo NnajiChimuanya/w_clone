@@ -8,11 +8,9 @@ const Main = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://wapp-clone-backend.herokuapp.com/api/message/sync")
-      .then((response) => {
-        setMessages(response.data);
-      });
+    axios.get(`${process.env.base_url}/api/message/sync`).then((response) => {
+      setMessages(response.data);
+    });
   }, []);
 
   useEffect(() => {
