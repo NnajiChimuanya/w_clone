@@ -17,15 +17,12 @@ export default function Chat({ messages }) {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    await axios.post(
-      "https://wapp-clone-backend.herokuapp.com/api/message/new",
-      {
-        message: input,
-        name: "Me",
-        timestamp: new Date().toDateString(),
-        recieved: false,
-      }
-    );
+    await axios.post(`${process.env.base_url}/api/message/new`, {
+      message: input,
+      name: "Me",
+      timestamp: new Date().toDateString(),
+      recieved: false,
+    });
 
     setInput("");
   };
