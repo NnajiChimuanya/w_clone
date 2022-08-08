@@ -8,9 +8,11 @@ const Main = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    axios.get(`${process.env.base_url}/api/message/sync`).then((response) => {
-      setMessages(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_base_url}/api/message/sync`)
+      .then((response) => {
+        setMessages(response.data);
+      });
   }, []);
 
   useEffect(() => {
