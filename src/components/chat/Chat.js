@@ -17,7 +17,7 @@ export default function Chat({ messages }) {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    await axios.post(`${process.env.base_url}/api/message/new`, {
+    await axios.post(`${process.env.REACT_APP_base_url}/api/message/new`, {
       message: input,
       name: "Me",
       timestamp: new Date().toDateString(),
