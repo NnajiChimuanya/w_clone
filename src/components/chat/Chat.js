@@ -20,7 +20,7 @@ export default function Chat({ messages }) {
     await axios.post(`${process.env.REACT_APP_base_url}/api/message/new`, {
       message: input,
       name: "Me",
-      timestamp: new Date().toDateString(),
+      timestamp: new Date().toLocaleDateString(),
       recieved: false,
     });
 
@@ -49,7 +49,7 @@ export default function Chat({ messages }) {
           const { id, message, name, timestamp, recieved } = item;
 
           return (
-            <p
+            <div
               key={index}
               className={`${recieved} ? chat-message chat-reciever : chat-message `}
             >
@@ -58,7 +58,7 @@ export default function Chat({ messages }) {
               {message}
 
               <span id="chat-timestamp">{timestamp}</span>
-            </p>
+            </div>
           );
         })}
       </div>
