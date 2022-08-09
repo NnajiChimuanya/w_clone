@@ -60,23 +60,32 @@
 }
 
 .chat-message {
+  display: flex;
   position: relative;
   font-size: 16px;
-  padding: 10px;
+  padding: 15px 10px;
+  max-width: 30vw;
   width: fit-content;
-  border-radius: 10px;
+
+  border-radius: 15px 0px 15px 15px;
   background-color: #ffffff;
   margin-bottom: 30px;
+  font-family: "Open Sans", sans-serif;
+  flex-wrap: wrap;
 }
 
 #chat-timestamp {
-  margin-left: 10px;
+  position: absolute;
   font-size: xx-small;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 10px;
 }
 
 .chat-name {
   position: absolute;
   top: -15px;
+  right: 0;
   font-weight: 800;
   font-size: small;
 }
