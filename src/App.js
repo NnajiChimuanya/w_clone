@@ -7,23 +7,18 @@ import Pusher from "pusher-js";
 import axios from "./axios";
 import Login from "./components/login/Login";
 import { Switch, Route } from "react-router-dom";
+import Cookie from "js-cookie";
 
 function App() {
-  const fetchData = async () => {
-    const data = await axios.get(
-      `${process.env.REACT_APP_base_url}/auth/success`,
-      {
-        withCredentials: true,
-      }
-    );
-    setUser(data.data);
-  };
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetchData();
+    let data = {
+      name: Cookie.get("user name"),
+      image: Cookie.get("user image"),
+    };
+    setUser(data);
   }, []);
-
-  const [user, setUser] = useState({});
 
   console.log(user);
 
