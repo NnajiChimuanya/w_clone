@@ -12,10 +12,7 @@ const Login = () => {
     //     console.log(res);
     //   });
 
-    window.open(
-      "https://wapp-clone-backend.herokuapp.com/auth/google",
-      "_self"
-    );
+    window.open("http://localhost:3001/auth/google", "_self");
   };
 
   return (
