@@ -3,6 +3,7 @@ import Chat from "./components/chat/Chat";
 import React, { useEffect, useState } from "react";
 import Pusher from "pusher-js";
 import axios from "./axios";
+import { Switch, Route } from "react-router-dom";
 
 const Main = () => {
   const [messages, setMessages] = useState([]);
@@ -36,6 +37,7 @@ const Main = () => {
   return (
     <div className="app-body">
       <Sidebar />
+
       <Chat messages={messages} />
     </div>
   );

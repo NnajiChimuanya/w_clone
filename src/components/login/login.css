@@ -78,6 +78,27 @@ Button {
   margin-left: 10px !important;
 }
 
+.google-login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.google-button {
+  background-color: white !important;
+  color: black;
+
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-text {
+  font-weight: 800px;
+}
+
 @media screen and (max-width: 650px) {
   .header {
     margin-left: -90px;

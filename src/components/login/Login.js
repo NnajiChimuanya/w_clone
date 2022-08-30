@@ -3,16 +3,26 @@ import React from "react";
 import { Button } from "@material-ui/core";
 import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import axios from "../../axios";
+import { GoogleLogin } from "react-google-login";
 
 const Login = () => {
-  const handleLoginClick = () => {
-    // axios
-    //   .get("https://wapp-clone-backend.herokuapp.com/auth/google/")
-    //   .then((res) => {
-    //     console.log(res);
-    //   });
+  const headers = {
+    "Content-Type": "application/json;charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "*",
+  };
 
-    window.open("http://localhost:3001/auth/google", "_self");
+  const handleLoginClick = () => {
+    axios
+      .get("http://localhost:3001/auth/google", {
+        mode: "cors",
+        headers: headers,
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -39,11 +49,10 @@ const Login = () => {
               <li>Tap on the "Continue with Google" button</li>
             </ol>
           </div>
-          <div className="login-button">
-            <Button fullWidth onClick={handleLoginClick}>
-              Continue with Google
-              <ArrowForwardIos className="arrow-forward" />
-            </Button>
+          <div className="google-login-container">
+            <GoogleLogin className="google-button">
+              <p className="google-text">Login with Google</p>
+            </GoogleLogin>
           </div>
         </div>
       </div>

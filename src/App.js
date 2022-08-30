@@ -12,17 +12,15 @@ import Cookie from "js-cookie";
 function App() {
   const [user, setUser] = useState(null);
   let data;
-  let name = Cookie.get("user name");
-  let image = Cookie.get("user image");
 
   useEffect(() => {
-    if (name && image) {
-      data = {
-        name: name,
-        image: image,
-      };
-      setUser(data);
-    }
+    // if (name && image) {
+    //   data = {
+    //     name: name,
+    //     image: image,
+    //   };
+    //   setUser(data);
+    // }
   }, []);
 
   console.log(user);
